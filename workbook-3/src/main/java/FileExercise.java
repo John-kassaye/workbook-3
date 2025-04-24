@@ -8,7 +8,7 @@ public class FileExercise {
     public static void main(String[] args) {
 
 //        #1
-                try(FileWriter fileWriter = new FileWriter("output.txt")){
+        try(FileWriter fileWriter = new FileWriter("output.txt")){
 
             fileWriter.write("somethings are going on");
         } catch (IOException e){
