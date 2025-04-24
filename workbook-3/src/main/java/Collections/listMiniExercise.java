@@ -7,47 +7,8 @@ import java.util.Scanner;
 public class listMiniExercise {
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        
-        int choice;
-        do {
-            System.out.println("which one do you like to see");
-            System.out.println("1: for list of numbers\n2: for list of players" +
-                   " \n3: for list of books\n4: Exit");
-             choice = scanner.nextInt();
-            
-            switch (choice){
-                case 1:
-                    displayNumbers();
-                    System.out.println("go back to home page(1)\nExit(4)");
-                     choice = scanner.nextInt();
-                     if (choice == 4){
-                         System.out.println("Thank you for using our application!");
-                     }
-                    break;
-                case 2:
-                    displayPlayers();
-                    System.out.println("go back to home page(1)\nExit(4)");
-                    choice = scanner.nextInt();
-                    if (choice == 4){
-                        System.out.println("Thank you for using our application!");
-                    }
-                    break;
-                case 3:
-                    displayBook();
-                    System.out.println("go back to home page(1)\nExit(4)");
-                    choice = scanner.nextInt();
-                    if (choice == 4){
-                        System.out.println("Thank you for using our application!");
-                    }
-                    break;
-                case 4:
-                    System.out.println("Thank you for using our application!");
-            }
-        }while (choice != 4);
-//        displayNumbers();
-//        displayPlayers();
-//        displayBook();
 
+        askingUser();
 
     }
 
@@ -129,6 +90,44 @@ public class listMiniExercise {
         for (Book i : books){
             System.out.println( i.getAuthor() + " wrote " + i.getTitle());
         }
-        
+
+    }
+    public static void askingUser(){
+        int choice;
+        do {
+            System.out.println("which one do you like to see");
+            System.out.println("1: for list of numbers\n2: for list of players" +
+                    " \n3: for list of books\n4: Exit");
+            choice = scanner.nextInt();
+
+            switch (choice){
+                case 1:
+                    displayNumbers();
+                    System.out.println("go back to home page(press any key)\nExit(4)");
+                    choice = scanner.nextInt();
+                    if (choice == 4){
+                        System.out.println("Thank you for using our application!");
+                    }
+                    break;
+                case 2:
+                    displayPlayers();
+                    System.out.println("go back to home page(press any key)\nExit(4)");
+                    choice = scanner.nextInt();
+                    if (choice == 4){
+                        System.out.println("Thank you for using our application!");
+                    }
+                    break;
+                case 3:
+                    displayBook();
+                    System.out.println("go back to home page(press any key)\nExit(4)");
+                    choice = scanner.nextInt();
+                    if (choice == 4){
+                        System.out.println("Thank you for using our application!");
+                    }
+                    break;
+                case 4:
+                    System.out.println("Thank you for using our application!");
+            }
+        }while (choice != 4);
     }
 }
